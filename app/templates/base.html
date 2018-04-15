@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Adding control flow for the movie title -->
+    {% if title%}
+      <title>{{title}}</title>
+    {%else%}
+      <title>Welcome to Watchlist</title>
+    {%endif%}
+  </head>
+  <body>
+
+    <!-- content block -->
+    {% block content%}{%endblock%}
+
+  </body>
+</html>

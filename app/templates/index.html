@@ -1,19 +1,10 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <!-- Adding control flow for the movie title -->
-    {% if title%}
-      <title>{{title}}</title>
-    {%else%}
-      <title>Welcome to Watchlist</title>
-    {%endif%}
-  </head>
-  <body>
-    
-    <!-- Looping through Items -->
-    {{macro.loopMovieList(popular)}}
 
-  </body>
-</html>
+
+{% block content%}
+
+<!-- Looping through Items -->
+{{macro.loopMovieList(popular)}}
+
+{%endblock%}
