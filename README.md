@@ -32,10 +32,11 @@ $ python3.6 run.py
 
 Each branch  tackles a specific part in the application development
 
-0. Master: The primary branch with all the content
-1. 01-Templates: Introduction to templates and template variables
-2. 02-Dynamic-routes : Creating a dynamic view function
-3. Configurations: Set up the projects configuration file
+0. Master: The primary branch with all the content.
+1. 01-Templates: Introduction to templates and template variables.
+2. 02-Dynamic-routes : Creating a dynamic view function.
+3. 03-Configurations: Set up the projects configuration file.
+4. 04-Control-Flows: Added control flows in our template files.
 
 ### License
 
