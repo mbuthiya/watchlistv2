@@ -1,3 +1,4 @@
+{% import 'macros.html' as macro %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,10 +11,9 @@
     {%endif%}
   </head>
   <body>
-    <li>Items</li>
+    
     <!-- Looping through Items -->
-    {% for movie in popular%}
-    <li>{{movie.movie_title}}</li>
-    {%endfor%}
+    {{macro.loopMovieList(popular)}}
+
   </body>
 </html>

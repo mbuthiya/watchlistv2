@@ -1,0 +1,6 @@
+{%macro loopMovieList(movie_list)%}
+  {% for movie in movie_list%}
+    <li>{{movie.movie_title}}</li>
+  {%endfor%}
+
+{% endmacro %}
