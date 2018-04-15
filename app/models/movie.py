@@ -16,6 +16,6 @@ class Movie:
         self.movie_id =id
         self.movie_title =title
         self.movie_overview=overview
-        self.movie_image =image
+        self.movie_image ='https://image.tmdb.org/t/p/w500/'+image
         self.movie_vote_average = vote_average
         self.movie_vote_count = vote_count
