@@ -21,5 +21,5 @@ def movie(movie_id):
     Args:
         1. movie_id:The unique id of the movie being displayed
     '''
-    title = movie_id
+    title = f'Movie {movie_id}'
     return render_template('movie.html',id=movie_id,title=title)
