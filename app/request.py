@@ -62,7 +62,6 @@ def process_movie_results(unedited_movie_list):
 
     return processed_movie_list
 
-
 def approved_movie(movie_dict):
     '''
     Checks to see if all the properities are available to create a new movie object
