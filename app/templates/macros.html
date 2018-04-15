@@ -1,6 +1,10 @@
 {%macro loopMovieList(movie_list)%}
   {% for movie in movie_list%}
-    <li>{{movie.movie_title}}</li>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" style="background:url({{movie.movie_image}})no-repeat center center">
+      <p> <span class="movie-title">{{movie.movie_title}}</span>  <span class="movie-average">{{movie.movie_vote_average}}</span> </p>
+
+
+    </div>
   {%endfor%}
 
 {% endmacro %}
