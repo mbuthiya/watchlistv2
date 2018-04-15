@@ -24,9 +24,10 @@ def get_movies(category):
     # Create empty movie dictionary
     movie_dictionary ={}
     final_movie_list =[]
-    
+
     # Request with error handling
     try:
+
         with urllib.request.urlopen(get_movies_url) as movies:
             movie_response = movies.read()
             movie_dictionary = json.loads(movie_response)
@@ -34,8 +35,11 @@ def get_movies(category):
         if movie_dictionary['results']:
             unedited_movie_list = movie_dictionary['results']
             final_movie_list = process_movie_results(unedited_movie_list)
+
         else:
             final_movie_list = []
+
+        return final_movie_list
 
     except URLError:
         print("woops")
@@ -55,7 +59,9 @@ def process_movie_results(unedited_movie_list):
     processed_movie_list =[]
 
     for movie_dict in unedited_movie_list:
+
         if approved_movie(movie_dict):
+
             id = movie_dict.get("id")
             title=movie_dict.get("original_title")
             overview=movie_dict.get("overview")
@@ -65,7 +71,7 @@ def process_movie_results(unedited_movie_list):
 
             # Generate movie object
             movie_dict_object = Movie(id,title,overview,image,vote_average,vote_count)
-
+            processed_movie_list.append(movie_dict_object)
     return processed_movie_list
 
 def approved_movie(movie_dict):
