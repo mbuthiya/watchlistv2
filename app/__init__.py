@@ -7,7 +7,7 @@ app = Flask(__name__,instance_relative_config=True)
 from .config import DevelopmentConfig
 
 app.config.from_object(DevelopmentConfig)
-app.config.from_pyfile("config.py")
+app.config.from_pyfile("config.py") # Instance config
 
 
 #import files

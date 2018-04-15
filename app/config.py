@@ -3,8 +3,8 @@ class Config:
     Parent configuration class that will hold universal configurations
     for the project irregadless of the environment
     '''
-
-    pass
+    
+    MOVIE_BASE_URL = 'https://api.themoviedb.org/3/movie/{}?api_key={}'
 
 
 class ProductionConfig(Config):
@@ -25,4 +25,4 @@ class DevelopmentConfig(Config):
         1. Config: Parent class with universal configuration
     '''
 
-    DEBUG = True 
+    DEBUG = True
