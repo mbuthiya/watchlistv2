@@ -56,6 +56,7 @@ Each branch  tackles a specific part in the application development
 7. 07-API-call: Make API call
 8. 08-For-Loops-Macros:Looping through items using Macros
 9. 09-Base-Template: Add base template and extend to template files
+10. 10-Adding-Bootstrap: Added Bootstrap extension and structured the page
 ### License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so.
