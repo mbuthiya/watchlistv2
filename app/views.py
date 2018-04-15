@@ -11,5 +11,6 @@ def index():
     '''
     Index view function loaded to display homepage information
     '''
+    message='Hello, World'
 
-    return render_template('index.html')
+    return render_template('index.html',message=message)
