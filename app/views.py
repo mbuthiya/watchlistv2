@@ -4,6 +4,9 @@ from flask import render_template
 # Import app instance
 from app import app
 
+# Import functions
+from .request import get_movies
+CATEGORY_LIST=["popular"]
 # Generate view functions
 
 @app.route('/')
@@ -12,7 +15,10 @@ def index():
     Index view function loaded to display homepage information
     '''
     title = 'Welcome to Watchlist'
-    return render_template('index.html',title=title)
+
+    # Making API call
+    popular_movies_list = get_movies(CATEGORY_LIST[0])
+    return render_template('index.html',title=title,popular=popular_movies_list)
 
 @app.route('/movie/<movie_id>')
 def movie(movie_id):
