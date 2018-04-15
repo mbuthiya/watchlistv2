@@ -1,6 +1,6 @@
 import urllib.request
 import json
-from urllib.error import URLError
+from urllib.error import URLError # Import the error class
 
 from app import app
 from .models.movie import Movie
@@ -24,7 +24,8 @@ def get_movies(category):
     # Create empty movie dictionary
     movie_dictionary ={}
     final_movie_list =[]
-    # Request
+    
+    # Request with error handling
     try:
         with urllib.request.urlopen(get_movies_url) as movies:
             movie_response = movies.read()
