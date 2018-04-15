@@ -23,4 +23,4 @@ def movie(movie_id):
         1. movie_id:The unique id of the movie being displayed
     '''
 
-    return render_template('movie.html' id=movie_id)
+    return render_template('movie.html',id=movie_id)
