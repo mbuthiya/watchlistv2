@@ -22,7 +22,21 @@ $ source virtual/bin/activate
 $ pip install -r requirements.txt
 ```
 
-4. Run the application
+4. Get an API key from [TMDB](https://www.themoviedb.org/)
+
+5. Create an Instance folder at your project root.
+```bash
+$ mkdir instance
+```
+6. Create a config.py file  inside the instance folder
+```bash
+$ touch instance/config.py
+```
+7.  Paste in the API key inside the new config.py file
+```python
+  MOVIE_API_KEY='Your API KEY HERE'
+```
+6. Run the application
 
 ```bash
 $ python3.6 run.py
