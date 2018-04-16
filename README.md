@@ -58,6 +58,7 @@ Each branch  tackles a specific part in the application development
 9. 09-Base-Template: Add base template and extend to template files
 10. 10-Adding-Bootstrap: Added Bootstrap extension and structured the page
 11. 11.Adding-CSS : Added css file and styled the page
+12. 12-Movie-Page: Add a movie page to display details on a single movie.
 ### License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so.
