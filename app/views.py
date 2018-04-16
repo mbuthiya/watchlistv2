@@ -5,7 +5,7 @@ from flask import render_template
 from app import app
 
 # Import functions
-from .request import get_movies
+from .request import get_movies,get_movie
 CATEGORY_LIST=["popular"]
 # Generate view functions
 
@@ -27,5 +27,6 @@ def movie(movie_id):
     Args:
         1. movie_id:The unique id of the movie being displayed
     '''
+    movie_request = get_movie(movie_id)
     title = f'Movie {movie_id}'
-    return render_template('movie.html',id=movie_id,title=title)
+    return render_template('movie.html',id=movie_id,title=title,movie=movie_request)
