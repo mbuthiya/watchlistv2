@@ -1,7 +1,11 @@
 {%macro loopMovieList(movie_list)%}
   {% for movie in movie_list%}
-    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" style="background:url({{movie.movie_image}})no-repeat center center">
-      <p> <span class="movie-title">{{movie.movie_title}}</span>  <span class="movie-average">{{movie.movie_vote_average}}</span> </p>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 movies" style="background:linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.3)), url({{movie.movie_image}})no-repeat top center">
+
+      <div class="movie-group">
+        <p> <span class="movie-title">{{movie.movie_title}}</span> <br> <span class="movie-average">{{movie.movie_vote_average}}</span> </p>
+
+      </div>
 
 
     </div>

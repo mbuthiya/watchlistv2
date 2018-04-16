@@ -1,0 +1,38 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: 'Black Han Sans';
+  color: white;
+
+}
+.navbar{
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.movies{
+  background-size: cover;
+  text-align: center;
+
+  min-height: 70vh;
+
+}
+.movies p{
+  font-size: 20px;
+  margin-top: 40vw;
+  padding: 5%;
+}
+.movies p:hover{
+  background-color: rgba(0,170,4,0.5);
+
+}
+
+.navbar-inverse .navbar-nav>li>a{
+  color: white;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+  color: #00AA04;
+}
+.navbar-inverse .navbar-brand{
+  color: #00AA04;
+}
