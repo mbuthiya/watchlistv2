@@ -1,6 +1,13 @@
 
 {% extends 'base.html'%}
 <!-- Content block -->
+
+
+{%block styles%}
+  {{super()}}
+  <link rel="stylesheet" href="{{url_for('static',filename='movie.css')}}">
+{%endblock%}
+
 {% block content %}
 <div class="container">
 

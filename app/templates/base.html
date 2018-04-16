@@ -1,5 +1,11 @@
 {% extends 'bootstrap/base.html'%}
 
+{%block styles%}
+  {{super()}}
+
+  <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+{%endblock%}
+
 {% block navbar %}
   {%include 'navbar.html'%}
 {%endblock%}

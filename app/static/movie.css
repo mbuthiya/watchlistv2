@@ -1,0 +1,42 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: 'Black Han Sans';
+  color: white;
+
+}
+.navbar{
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+  color: white;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+  color: #00AA04;
+}
+.navbar-inverse .navbar-brand{
+  color: #00AA04;
+}
+.posterPath{
+  position: fixed;
+  min-height: 100vh;
+}
+
+.movie-details{
+  float: right;
+  margin-top: 40vh;
+  text-align: center;
+}
+.movie-details h3, .movie-details .ratings{
+  color: #00AA04;
+  font-weight: bold;
+
+}
+.movie-details h3{
+  font-size:40px;
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
+}
