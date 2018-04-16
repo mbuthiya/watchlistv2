@@ -86,3 +86,39 @@ def approved_movie(movie_dict):
         return True
     else:
         return False
+
+
+def get_movie(movie_id):
+    '''
+    Request function to search for a single movie using its id
+    Args:
+        movie_id: The unique movie Id
+    '''
+
+    get_movie_url=BASE_URL.format(id,API_KEY)
+    movie_object = None
+    movie_dictionary = {}
+
+    try:
+        with urllib.request.urlopen(get_movie_url) as movie:
+            movie_response = movie.read()
+            movie_dictionary = json.loads(movie_response)
+
+        if movie_dictionary and approved_movie(movie_dictionary):
+
+            id = movie_dictionary.get("id")
+            title=movie_dictionary.get("original_title")
+            overview=movie_dictionary.get("overview")
+            image =movie_dictionary.get("poster_path")
+            vote_average =movie_dictionary.get("vote_average")
+            vote_count =movie_dictionary.get("vote_count")
+
+            movie_object = Movie(id,title,overview,image,vote_average,vote_count)
+        else:
+            movie_object = None
+        return movie_object
+
+
+    except URLError:
+        print('woops')
+    return movie_object
