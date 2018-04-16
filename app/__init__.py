@@ -16,4 +16,4 @@ app.config.from_pyfile("config.py") # Instance config
 bootstrap = Bootstrap(app)
 
 #import files
-from app import views
+from app import views , error
