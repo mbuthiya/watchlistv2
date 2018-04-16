@@ -95,7 +95,7 @@ def get_movie(movie_id):
         movie_id: The unique movie Id
     '''
 
-    get_movie_url=BASE_URL.format(id,API_KEY)
+    get_movie_url=BASE_URL.format(movie_id,API_KEY)
     movie_object = None
     movie_dictionary = {}
 
