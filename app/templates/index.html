@@ -4,7 +4,7 @@
 <!-- Styles Block -->
 {%block styles%}
   {{super()}}
-  
+
   <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
 
   <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
@@ -12,6 +12,14 @@
 
 <!-- Content Block -->
 {% block content%}
+
+<div class="container">
+    <form>
+        <input type="text" name="movie_query" placeholder="Search for a Movie" class="form-control">
+        <input type="submit"  value="Submit" class="btn btn-default">
+    </form>
+
+</div>
 
 <div class="container">
   <div class="row">

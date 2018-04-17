@@ -7,6 +7,7 @@ from .models.movie import Movie
 
 API_KEY = app.config['MOVIE_API_KEY']
 BASE_URL = app.config['MOVIE_BASE_URL']
+SEARCH_BASE_URL = app.config['MOVIE_SEARCH_BASE_URL']
 
 
 
@@ -122,3 +123,30 @@ def get_movie(movie_id):
     except URLError:
         print('woops')
     return movie_object
+
+
+def search_movie(movie_name):
+    '''
+    Request function to search for movies
+    Args:
+        movie_name: Name of the movie to search for.
+    '''
+    search_movie_url =SEARCH_BASE_URL.format(API_KEY,movie_name)
+
+    search_movie_results = None
+    search_movie_response ={}
+    try:
+        with urllib.request.urlopen(search_movie_url) as url:
+            search_movie_data = url.read()
+            search_movie_response = json.loads(search_movie_data)
+
+
+        if search_movie_response['results']:
+            search_movie_list = search_movie_response['results']
+            search_movie_results = process_movie_results(search_movie_list)
+
+        return search_movie_results
+    except URLError:
+        print("woops")
+
+    return search_movie_results
